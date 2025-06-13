@@ -1,0 +1,101 @@
+        /* Estilos personalizados adicionais */
+        .staff-line {
+            height: 2px; /* Espessura da linha da pauta */
+            background-color: black;
+            width: 100%;
+        }
+        .note {
+            width: 24px; /* Largura da nota */
+            height: 20px; /* Altura da nota */
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%; /* Faz a div parecer uma elipse/círculo */
+            position: absolute;
+            transform: translate(-50%, -50%); /* Centraliza a nota na posição */
+            transition: all 0.3s ease; /* Adiciona uma transição suave */
+        }
+        /* Ajuste para centralizar a pauta e o botão */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(5_71.png); /* Cor de fundo suave */
+            font-family: sans-serif; /* Fonte padrão */
+        }
+        .staff-container {
+            width: 80%; /* Largura da pauta */
+            max-width: 600px; /* Largura máxima */
+            height: 90px; /* Altura total para as 5 linhas (4 espaços * 20px) */
+            position: relative; /* Necessário para posicionar as notas absolutamente */
+            margin-bottom: 40px; /* Espaço abaixo da pauta */
+            background-color: rgb(26, 118, 180); /* Fundo branco para a pauta */
+            padding: 10px 0; /* Espaçamento interno vertical */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(109, 146, 160, 0.1); /* Sombra suave */
+        }
+        /* Define o espaçamento entre as linhas da pauta */
+        .staff-container > div:not(:last-child) {
+            margin-bottom: 22.5px; /* 80px altura total / 4 espaços = 20px por espaço. Ajustado para 18px + 2px da linha */
+        }
+
+         /* Define o espaçamento entre as linhas da pauta */
+        .staff-container > div.staff-line:not(:last-child) {
+            /* Ajuste para selecionar apenas as linhas */
+           margin-bottom: 18px; /* 80px altura total / 4 espaços = 20px por espaço. Ajustado para 18px + 2px da linha */
+       }
+
+        /* Estilo do botão */
+        .generate-button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right, #080450, #3a55ed); /* Gradiente roxo */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .generate-button:hover {
+            background: linear-gradient(to right, #080450, #3a55ed); /* Gradiente mais escuro no hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px); /* Efeito de levantar */
+        }
+         .generate-button:active {
+            transform: translateY(0px); /* Efeito de pressionar */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Clave de Sol (SVG simples) */
+        .clef {
+            position: absolute;
+            left: 10px; /* Posição da clave */
+            top: -10px; /* Ajuste vertical da clave */
+            height: 100px; /* Altura da clave */
+            z-index: 5; /* Para ficar sobre as linhas se necessário */
+        }
+
+        .labels-container {
+            width: 80%; /* Mesma largura da pauta */
+            max-width: 600px; /* Mesma largura máxima */
+            height: 30px; /* Altura para os nomes */
+            position: relative; /* Para posicionar os nomes absolutamente dentro dele */
+            margin-top: 10px; /* Espaço entre a pauta e os nomes */
+            margin-bottom: 30px; /* Espaço abaixo dos nomes antes do botão */
+            /* border: 1px solid red; /* Descomente para visualizar a área */
+        }
+
+        .note-label {
+            position: absolute;
+            top: 0; /* Alinha no topo do container de labels */
+            font-size: 14px; /* Tamanho da fonte */
+            color: #ffffff; /* Cor do texto */
+            transform: translateX(-50%); /* Centraliza o texto horizontalmente abaixo da nota */
+            white-space: nowrap; /* Evita quebra de linha */
+        }
+
+        .text-2xl {
+            color: #b4b2c9;
+        }

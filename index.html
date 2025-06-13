@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de notas Músicais aleatórias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex flex-col justify-center items-center min-h-screen p-4">
+    
+    <h1 class="text-2xl">Gerador de Notas Musicais</h1>
+    
+    <div id="staff" class="staff-container">
+        <img class="clef" src="musical-note-svgrepo-com.svg" alt="">
+        <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        <div class="staff-line"></div>
+        <div id="notes-container" class="absolute top-0 left-0 w-full h-full"></div>
+    </div>
+    <div id="labels-container" class="labels-container" >
+    </div>
+    
+    <button id="generateButton" class="generate-button">
+        Gerar 5 Notas Aleatórias
+    </button>
+    
+    <script src="main.js"></script>
+</html>
